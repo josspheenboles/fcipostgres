@@ -1,0 +1,42 @@
+Submit a single document (PDF or Markdown) containing:
+
+Your SQL queries / ORM code snippets.
+
+Screenshots of the query results inside DB Browser for SQLite where requested.
+
+Short written responses explaining your reasoning.
+
+Part 0: Basic Selection & Filtering (15 Points)
+Simple Select (3 pts): Write a query to display all columns and all rows from the employee table.
+
+Column Projection & Alias (4 pts): Write a query that returns only the name and salary of all employees. Rename the columns in the output to Employee Name and Monthly Pay using column aliases.
+
+WHERE Filtering with Conditions (4 pts): Write a query to find the names of all employees who earn less than $75,000.
+
+Combining Conditions (4 pts): Write a query to select all employees who belong to Department 1 (Engineering) AND have a salary greater than or equal to $85,000.
+
+
+Part 1: Relational JOINs & Data Inspection (25 Points)
+Inner Join (5 pts): Write a query to list all employee names alongside their department names. Explain why "Evan" does not appear in the result set.
+
+Left Join (10 pts): Write a query to list all employee names alongside their department names, ensuring employees without a department are still included.
+
+Simulating Right Join in SQLite (10 pts): SQLite does not support RIGHT JOIN. Write a query using a LEFT JOIN that lists all department names, including departments that currently have zero assigned employees (like 'Executive').
+
+Part 2: Aggregations, Grouping, & Subqueries (35 Points)
+Department Payroll Summary (15 pts): Write a single query that calculates:
+
+Department Name
+
+Headcount (total_employees)
+
+Total Payroll (total_payroll)
+
+Average Salary (avg_salary) rounded to 2 decimal places
+
+Order the results by avg_salary in descending order.
+
+Above-Average Salaries Subquery (10 pts): Write a query using a subquery in the WHERE clause to list the name and salary of all employees who make more than the company-wide average salary.
+
+Having vs. Where (10 pts): Write a query to find only the departments where the total department payroll exceeds $100,000. Explain in 1–2 sentences why the HAVING clause must be used instead of WHERE.
+
