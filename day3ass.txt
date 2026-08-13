@@ -1,27 +1,19 @@
 Create a Standard View (active_loans_view):
 
-Write a view that joins books and loans to display the borrower name, book title, author, and loan date for all currently active loans.
+Write a view that joins department and employees to display the depart name, employee name for all currently employee
 
-Create a Materialized View (popular_books_mv):
+Create a Materialized View (emp_dept_view):
 
-Create a materialized view that aggregates how many times each book has been loaned out (book_id, title, total_loans).
+Create a materialized view that aggregates how many employee 
 
-Create a UNIQUE index on book_id for this materialized view to allow concurrent refreshes.
+Create a Standard View (active_employees):
 
-Create a Standard View (active_loans_view):
+Write a view that joins employee and department to display the department name, employee name ,bdate all currently active loans.
 
-Write a view that joins books and loans to display the borrower name, book title, author, and loan date for all currently active loans.
+Create an Audit Table (employee_audit):
 
-Create a Materialized View (popular_books_mv):
+Columns: audit_id (SERIAL PRIMARY KEY), emplooyee_id (INT), name (VARCHAR), changed_at (TIMESTAMP DEFAULT CURRENT_TIMESTAMP).
 
-Create a materialized view that aggregates how many times each book has been loaned out (book_id, title, total_loans).
+Write a Trigger Function (log_employee_deletion):
 
-Create a UNIQUE index on book_id for this materialized view to allow concurrent refreshes.
-
-Create an Audit Table (inventory_audit):
-
-Columns: audit_id (SERIAL PRIMARY KEY), book_id (INT), action (VARCHAR), changed_at (TIMESTAMP DEFAULT CURRENT_TIMESTAMP).
-
-Write a Trigger Function (log_book_deletion):
-
-Write a trigger function using RETURNS TRIGGER that automatically logs an entry into inventory_audit whenever a book is deleted from the books table, capturing the deleted book_id and the action 'DELETE'.
+Write a trigger function using RETURNS TRIGGER that automatically logs an entry into employee_audit whenever a employee is deleted from the employee table, capturing the deleted employee and the action 'DELETE'.
