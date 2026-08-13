@@ -1,0 +1,27 @@
+Create a Standard View (active_loans_view):
+
+Write a view that joins books and loans to display the borrower name, book title, author, and loan date for all currently active loans.
+
+Create a Materialized View (popular_books_mv):
+
+Create a materialized view that aggregates how many times each book has been loaned out (book_id, title, total_loans).
+
+Create a UNIQUE index on book_id for this materialized view to allow concurrent refreshes.
+
+Create a Standard View (active_loans_view):
+
+Write a view that joins books and loans to display the borrower name, book title, author, and loan date for all currently active loans.
+
+Create a Materialized View (popular_books_mv):
+
+Create a materialized view that aggregates how many times each book has been loaned out (book_id, title, total_loans).
+
+Create a UNIQUE index on book_id for this materialized view to allow concurrent refreshes.
+
+Create an Audit Table (inventory_audit):
+
+Columns: audit_id (SERIAL PRIMARY KEY), book_id (INT), action (VARCHAR), changed_at (TIMESTAMP DEFAULT CURRENT_TIMESTAMP).
+
+Write a Trigger Function (log_book_deletion):
+
+Write a trigger function using RETURNS TRIGGER that automatically logs an entry into inventory_audit whenever a book is deleted from the books table, capturing the deleted book_id and the action 'DELETE'.
