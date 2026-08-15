@@ -1,0 +1,11 @@
+Write a Python function named celsius_to_fahrenheit(celsius) that takes a temperature in Celsius as an argument and returns the equivalent temperature in Fahrenheit.Formula: $\text{Fahrenheit} = (\text{Celsius} \times \frac{9}{5}) + 32$Requirements:Define the function using the def keyword.Return the calculated value (do not just print it inside the function).Test your function with at least two different temperature values.
+
+Write a function named write_log(filename, log_message) that takes a filename (string) and a message (string) as arguments.
+
+Requirements:
+
+Open the file in append mode ('a') so previous logs aren't overwritten.
+
+Write the log_message to the file on a new line.
+
+Use a with statement to ensure the file is properly closed after writing.
