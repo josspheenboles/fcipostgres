@@ -1,0 +1,8 @@
+Create a simple banking system using OOP principles.
+
+Create a base class called Account with encapsulated attributes for account_holder and balance.
+
+Implement methods for deposit and withdraw.
+
+Create a subclass called SavingsAccount that inherits from Account and adds an interest rate feature.
+
